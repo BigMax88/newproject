@@ -37,28 +37,28 @@
 		<!--session-->
 		<div class = "session">
 			<img class="one" src = "img/title1.png" />
-			<div id="ses" clsaa="sesone">
-				<img id="pic1" src="img/pic1.png" />
+			<div id="ses" class="sesone srs">
+				<img id="pic1" class="pic2" src="img/pic1.png" />
 				<h4>服务器安全</h4>
 				<p>有卡啦采用群集服务器，防御高，故障率低，无论用户身在何处，均能获得流畅安全可靠的体验。</p>
 			</div>
-			<div id="ses">
-				<img id="pic1" src="img/pic2.png" />
+			<div id="ses" class="srs">
+				<img id="pic1" class="pic2" src="img/pic2.png" />
 				<h4>界面简约</h4>
 				<p>简约的UI交互体验可以给您一个体验度极高的商户后台，更好的下单体验。</p>
 			</div>
-			<div id="ses">
-				<img id="pic1" src="img/pic3.png" />
+			<div id="ses" class="srs">
+				<img id="pic1" class="pic2" src="img/pic3.png" />
 				<h4>安全保障</h4>
 				<p>有卡啦商户的商品，全部加密处理，专业运维24小时处理，您的帐户安全将得到充分的保障。</p>
 			</div>
-			<div id="ses">
-				<img id="pic1" src="img/pic4.png" />
+			<div id="ses" class="srs">
+				<img id="pic1" class="pic2" src="img/pic4.png" />
 				<h4>故障超低</h4>
 				<p>有卡啦的服务器渠道直接对接官方，直接去掉中间商的转接，因此我们可以给商户提供更稳定的保障。</p>
 			</div>
-			<div id="ses">
-				<img id="pic1" src="img/pic5.png" />
+			<div id="ses" class="srs">
+				<img id="pic1" class="pic2" src="img/pic5.png" />
 				<h4>持续更新</h4>
 				<p>有卡啦系统持续更新，功能持续完善，让商户以及客户的体验不断接近完美是我们一直不变的追求！</p>
 			</div>
@@ -73,16 +73,32 @@
 		<!--section-->
 		<div class = "section">
 			<img class="secImg" src="img/title3.png" />
-			<ul>
-				<li><img src="img/zf1.png"/></li>
-				<li><img src="img/zf2.png"/></li>
-				<li><img src="img/zf3.png"/></li>
-				<li><img src="img/zf4.png"/></li>
-				<li></li>
-				<li><img src="img/zf6.png"/></li>
-				<li><img src="img/zf7.png"/></li>
-				<li></li>
-			</ul>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf1.png"  /></a>
+				<a href=""id="img2"><img src="img/zfb_on.png" /></a>
+			</div>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf3.png"  /></a>
+				<a href=""id="img2"><img src="img/wxzf_on.png" /></a>
+			</div>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf4.png"  /></a>
+				<a href=""id="img2"><img src="img/qqzf_on.png" /></a>
+			</div>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf2.png"  /></a>
+				<a href=""id="img2"><img src="img/yl_on.png" /></a>
+			</div>
+			<div class="zf"></div>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf7.png"  /></a>
+				<a href=""id="img2"><img src="img/dkzf_on.png" /></a>
+			</div>
+			<div class="zf">
+				<a href="" id="img1"><img src="img/zf6.png"  /></a>
+				<a href=""id="img2"><img src="img/cft_on.png" /></a>
+			</div>
+			<div class="zf"></div>
 		</div>
 		<!--botto-->
 		<div class="botto">
@@ -131,7 +147,18 @@
 			<div class="la0"><img src = "img/pf1.jpg"/></div>
 			<div class="la1"><img src = "img/pf2.jpg"/></div>
 			<div class="la2"><img src = "img/pf3.jpg"/></div>
-			<div class="la3"><img src = "img/pf4.jpg"/></div>
+			<div class="la3"><img src = "img/pf4.jpg"/></div>	
+		</div>
+		<div class="pf2">
+			<img src="img/pf2.jpg"/>
+			<span id="pf22">020-88888</span>	
+		</div>
+		<div class="pf3">
+			<img src="img/pf3.jpg"/>
+			<span id="pf23">1960276917</span>	
+		</div>
+		<div class="pf4">
+			<img src="img/qr-img.png"/>	
 		</div>
 	</body>
 </html>
@@ -154,17 +181,56 @@
 				document.documentElement.scrollTop=document.body.scrollTop=0
 			})
 			$(".la0").hover(
-				function(){
-					$(".la0").css({
-					"background":"blue"
-				});
+					function(){
+						$(".la0").css({
+						"background":"blue"
+					});
 				},
-				function(){
-					$(".la0").css({
-					"background":"#fff"
-				});
+					function(){
+						$(".la0").css({
+						"background":"#fff"
+					});
 				}
 			)
+			
+			
+			$(".la1").hover(
+					function(){
+						$(".pf2").animate({
+						right:0
+					},1000);
+				},
+					function(){
+						$(".pf2").animate({
+						right:-200
+					},1000);
+				}
+			);
+			$(".la2").hover(
+					function(){
+						$(".pf3").animate({
+						right:0
+					},1000);
+				},
+					function(){
+						$(".pf3").animate({
+						right:-200
+					},1000);
+				}
+			);
+			$(".la3").hover(
+					function(){
+						$(".pf4 img").animate({
+						opacity:1
+					},1000);
+				},
+					function(){
+						$(".pf4 img").animate({
+						opacity:0
+					},1000);
+				}
+			);
+			
     });
         
 
@@ -178,6 +244,16 @@ window.onscroll=function(){
             		top:295,
             		left:15
 			},500)
+		}
+		
+		if(scrollTop>=630){
+			for(let i=0;i<$(".srs").length;i++){
+				console.info($(".srs"));
+				$(".srs").find(".pic2").animate({
+            		width:150,
+            		height:100
+			},1000);
+			}
 		}
 		
 		if(scrollTop>=2400){
