@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>企业资质</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/second.css" />
+	</head>
+	<body>
+		<!--header-->
+			<div class="header">
+				<img src = "img/logo.png" />
+				<h6>孝感齐天网络有限公司</h6>
+				<a href="#">首页</a>
+				<a href="#">企业资源</a>
+				<a href="#">APP下载</a>
+				<a href="#">帮助中心</a>
+				<a href="#">联系我们</a>
+				<p>商品注册</p>
+				<p>订单查询</p>
+			</div>
+        <!--banner-->
+        <div class="banner">
+        	<h3>企业资质</h3>
+        	<p>公司营业执照</p>
+        	<img src="img/yyzz.jpg" />
+        	<p>增值电信业务经营许可证</p>
+        	<img src="img/ICP.jpg" />
+        	<p>网络文化经营许可证</p>
+        	<img src = "img/www.jpg" />
+        	<p>律师事务所</p>
+        	<img src="img/lsdw.jpg" / id="lastimg">
+        </div>
+        <!--pf-->
+			<div class="pf">
+				<div class="la0"><img src = "img/pf1.jpg"/></div>
+				<div class="la1"><img src = "img/pf2.jpg"/></div>
+				<div class="la2"><img src = "img/pf3.jpg"/></div>
+				<div class="la3"><img src = "img/pf4.jpg"/></div>	
+			</div>
+			<div class="pf2">
+				<img src="img/pf2.jpg"/>
+				<span id="pf22">020-88888</span>	
+			</div>
+			<div class="pf3">
+				<img src="img/pf3.jpg"/>
+				<span id="pf23">1960276917</span>	
+			</div>
+			<div class="pf4">
+				<img src="img/qr-img.png"/>	
+			</div>
+	</body>
+</html><br />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript">
+	$(function(){
+		$(".header").animate({
+				top:0,
+				left:0
+			},2000)
+			
+			$("#box").animate({
+				top:80,
+				left:880
+			},2000)
+		$(".la1").hover(
+					function(){
+						$(".pf2").animate({
+						right:0
+					},1000);
+				},
+					function(){
+						$(".pf2").animate({
+						right:-200
+					},1000);
+				}
+			);
+			$(".la2").hover(
+					function(){
+						$(".pf3").animate({
+						right:0
+					},1000);
+				},
+					function(){
+						$(".pf3").animate({
+						right:-200
+					},1000);
+				}
+			);
+			$(".la3").hover(
+					function(){
+						$(".pf4 img").animate({
+						opacity:1
+					},1000);
+				},
+					function(){
+						$(".pf4 img").animate({
+						opacity:0
+					},1000);
+				}
+			);
+			
+	});
+</script>

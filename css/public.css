@@ -1,0 +1,134 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,option,textarea{
+	margin:0;
+	padding:0;
+}
+img{
+	border: none;
+}
+.header{
+	width:1263px;
+	height:80px;
+	background:white;
+	margin:0 auto;
+	border-bottom:1px solid #dddddd;
+	position:absolute;
+	left:0;
+	top: -81px;
+}
+.header img{
+	margin-top:24px;
+	margin-left:33px;
+	float:left;
+	margin-right:76px;
+}
+h6{
+	width:167px;
+	height:20px;
+	font-size:12px;
+	line-height:20px;
+	text-align:center;
+	background:#0acffe;
+	color:#e7faff;
+	position:absolute;
+	left:218px;
+	bottom:8px;
+}
+a{
+	text-decoration:none;
+	font-size:16px;
+	color:#404040;
+	margin-right:40px;
+	float:left;
+	margin-top:34px;
+}
+.header p{
+	float:left;
+	width:140px;
+	height:40px;
+	font-size:14px;
+	border:1px solid #0acffe;
+	text-align:center;
+	line-height:40px;
+	border-radius:20px;
+	margin-top:20px;
+}
+.header p:nth-of-type(1):hover{
+	background:#0acffe;
+}
+.header p:last-child{
+	background:#0acffe;
+	color:white;
+	margin-left:20px;
+}
+/*pf*/
+.pf{
+	position: fixed;
+    border: 1px solid #eee;
+    background: #fff;
+    right: 0;
+    bottom: 180px;
+    z-index: 1;
+}
+.pf div{
+	width: 50px;
+    height: 50px;
+    border-right: none;
+    margin-bottom: -1px;
+    line-height: 50px;
+    text-align: center;
+    color: #0acffe;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: linear 0.3s;
+    position: relative;
+    overflow:hidden;
+}
+.pf2{
+	background:cornflowerblue;
+	width:150px;
+	height:50px;
+	position:fixed;
+	right:-200px;
+	bottom:280px;
+	padding:0 10px;
+	z-index:2;
+}
+#pf22{
+	font-size:18px;
+	font-weight:600;
+	color:white;
+	line-height:50px;
+	text-alifn:center;
+}
+.pf3{
+	background:cornflowerblue;
+	width:150px;
+	height:50px;
+	position:fixed;
+	right:-200px;
+	bottom:230px;
+	padding:0 10px;
+	z-index:2;
+}
+#pf23{
+	font-size:18px;
+	font-weight:600;
+	color:white;
+	line-height:50px;
+	text-alifn:center;
+}
+.pf4{
+	width:200px;
+	height:150px;
+	position:fixed;
+	right:100px;
+	bottom:200px;
+}
+.pf4 img{
+	display:block;
+	position:fixed;
+	right:100px;
+	bottom:200px;
+	opacity:0;
+}
