@@ -13,11 +13,11 @@
 				<img src = "img/logo.png" />
 				<h6>孝感齐天网络有限公司</h6>
 				<a href="#">首页</a>
-				<a href="#">企业资源</a>
-				<a href="#">APP下载</a>
+				<a href="second.html" target="_blank">企业资源</a>
+				<a href="third.html" target="_blank">APP下载</a>
 				<a href="#">帮助中心</a>
-				<a href="#">联系我们</a>
-				<p>商品注册</p>
+				<a href="fifth.html" target="_blank">联系我们</a>
+				<p id="register">用户注册</p>
 				<p>订单查询</p>
 			</div>
 			<!--banner-->
@@ -282,4 +282,11 @@ window.onscroll=function(){
 		}
 		
 	}	
+</script>
+<script type="text/javascript">
+	window.onload = function(){
+		$("#register").click(function(){
+			location.href = "dlzc.html";
+		})
+	}
 </script>
