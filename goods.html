@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h3{
+				font-size:22px;
+				color:#444444;
+				padding-bottom:20px;
+				background:url(img/hbj.jpg) repeat-x bottom;
+			}
+			.goods a{
+				text-decoration: none;
+				color:#666667;
+				font-size:12px;
+				padding:0 80px;
+				border-right:1px solid #ebebeb; 
+			}
+			.goods a:nth-child(7){
+				border-right:none; 
+			}
+			.price{
+				height:58px;
+				border:1px solid #ebebeb;
+				margin-top:20px;
+				margin-bottom:20px;
+			}
+			.price span{
+				font-size:12px;
+				color:#666667;
+				line-height:58px;
+				padding-right:10px;
+				
+			}
+			.price span:nth-child(5){
+				font-size:12px;
+				color:#666667;
+				line-height:58px;
+				font-weight:600;
+				padding-right:10px;
+				padding-left:170px
+			}
+			#number{
+				color:#fb4a9b;
+			}
+			#colorprice{
+				color:#fb4a9b;
+				text-align:center;
+			}
+			.price p{
+				float:right;
+				height:58px;
+				line-height:58px;
+				width:100px;
+				color:white;
+				text-align:center;
+				background:#fb4a9b;
+				margin:0 0;
+			}
+			.list{
+				height:158px;
+				border:1px solid #ebebeb;
+				margin-top:10px;
+				position:relative;
+			}
+			.list p{
+				font-size:16px;
+				color:#444444;
+				height:52px;
+				line-height:52px;
+				font-weight:600;
+				margin:0 0 ;
+				background:url(img/hbj.jpg);
+			}
+			#lastimg{
+				float:left;
+				padding-top:20px;
+				padding-left:20px;
+			}
+			strong{
+				float:left;
+				font-size:14px;
+				font-weight:500;
+				background:white;
+				padding-top:40px;
+				padding-left:20px;
+			}
+			strong span{
+				color:gray;
+				font-size:14px;
+				margin-bottom:5px;
+			}
+			.line1{
+				display:block;
+				margin-left:480px;
+				margin-top:30px;
+			}
+			.line2{
+				display:block;
+				margin-left:480px;
+				color:gray;
+				text-decoration:line-through;
+			}
+			table{
+				border-collapse:collapse;
+				position:absolute;
+				left:640px;
+				top:100px;
+			}
+			#qian{
+				display:block;
+				width:80px;
+				color:red;
+				position:absolute;
+				left:850px;
+				top:100px;
+			}
+			.removebutn{
+				position:absolute;
+				left:1050px;
+				top:100px;
+			}
+			.goods{
+				border-bottom:2px solid #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>我的购物车</h3>
+		<div class="goods">
+			<input type="checkbox" / >
+			<a href="">商品</a>
+			<a href="">规格</a>
+			<a href="">单价</a>
+			<a href="">数量</a>
+			<a href="">小计</a>
+			<a href="">操作</a>
+			<div class="list">
+				<p>中国农商银行，您的好卡，你值得拥有</p>
+				<img src="img/goods.jpg" id="lastimg"/>
+				<strong>青春卡<br/><span>已选青春卡*1</span></strong>
+				<span class="line1">49.00</span>
+				<span class="line2">99.00</span>
+				<table>
+					<td>
+						<input class="reducebutn"  type="button" value="-" />
+						<span id="spanIdtwo" style="padding-right: 5px;padding-left: 10px;">1</span>
+						<input class="addbutn" type="button" value="+" />
+				    </td>
+				</table>
+				<span id="qian">100</span>
+				<input class="removebutn" type="button" value="删除" />
+			</div>
+			<div class="price">
+				<input type="checkbox" / >全选
+				<span>删除选择商品</span>
+				<span>清除无效商品</span>
+				<span>移除收藏夹</span>
+				<span>已选择<span id="number">0</span>件商品（不含运费和进口税）：<span id="colorprice">￥100RMB</span></span>
+				<p id="suan">去结算</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript"> 
+window.onload=function(){
+      	function $(str){
+		if(str.charAt(0)=="#"){
+			return document.getElementById(str.substring(1));
+		}else if(str.charAt(0)=="."){
+			return document.getElementsByClassName(str.substring(1));
+		}else{
+			return document.getElementsByTagName(str);
+		}
+	}
+      var qian = parseInt($("#qian").innerHTML);
+      console.log(qian);
+     $(".reducebutn")[0].onclick=function(){
+     	var count = parseInt(this.nextElementSibling.innerHTML);
+     	count--;
+     	if(count<0){
+     		return
+     	}
+     	this.nextElementSibling.innerHTML = count;
+     	qian-=100;
+     	$("#qian").innerHTML=qian;
+     }
+     $(".addbutn")[0].onclick=function(){
+     	var count = parseInt(this.previousElementSibling.innerHTML);
+     	count++;
+     	this.previousElementSibling.innerHTML = count;
+     	qian+=100;
+     	$("#qian").innerHTML=qian;
+     }
+    
+	$(".removebutn")[0].onclick = function(){
+		this.parentNode.remove();
+	}
+		
+ }
+</script>
